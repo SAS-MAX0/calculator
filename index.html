@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Calculator with Additional Features</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-container">
+        <!-- Calculator Panel -->
+        <div class="panel calculator-panel">
+            <h2>Calculator</h2>
+            <div class="display" id="display">0</div>
+            <div class="buttons">
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="deleteLast()">DEL</button>
+                <button onclick="appendOperator('/')">/</button>
+                <button onclick="appendOperator('*')">*</button>
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button onclick="appendOperator('-')">-</button>
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button onclick="appendOperator('+')">+</button>
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button onclick="calculate()">=</button>
+                <button onclick="appendNumber('0')">0</button>
+                <button onclick="appendFunction('sqrt')">√</button>
+                <button onclick="toggleHistory()">History</button>
+                <button onclick="toggleDarkMode()">🌓</button>
+            </div>
+            <div id="history-panel" style="display: none;">
+                <h3>History</h3>
+                <ul id="history-list"></ul>
+            </div>
+        </div>
+
+        <!-- Random Number Game Panel -->
+        <div class="panel random-game-panel">
+            <h2>Random Number Game</h2>
+            <p>Guess a number between 1 and 100!</p>
+            <input type="number" id="guess-input" placeholder="Enter your guess" min="1" max="100" class="large-input">
+            <button onclick="makeGuess()">Guess</button>
+            <p id="game-feedback"></p>
+            <button onclick="resetGame()">Reset Game</button>
+        </div>
+
+        <!-- Date Calculator Panel -->
+        <div class="panel datetime-calculator-panel">
+            <h2>Date Calculator</h2>
+            <p>Calculate the difference between two dates:</p>
+            <input type="date" id="start-date-input" class="large-input">
+            <input type="date" id="end-date-input" class="large-input">
+            <button onclick="calculateDateDifference()">Calculate Difference</button>
+            <p id="datetime-result">Years: - Months: - Days: -</p>
+        </div>
+    </div>
+    <p>
+    <script src="script.js"></script>
+</body>
+</html>
